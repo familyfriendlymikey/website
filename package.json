@@ -1,0 +1,20 @@
+{
+  "name": "ffm",
+  "scripts": {
+    "start": "imba -wS server.imba",
+    "deploy": "rm -rf dist && imba build --baseurl \".\" server.imba && mv dist/public/__assets__ dist/public/assets && sed -i '' 's/__assets__/assets/g' dist/public/index.html && echo \"mikey.love\" > dist/public/CNAME && gh-pages -f -d dist/public/"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "imba": "^2.0.0-alpha.133"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "gh-pages": "^3.1.0"
+  },
+  "description": "",
+  "version": "1.0.0",
+  "homepage": "https://github.com//familyfriendlymikey.github.io",
+  "author": "Mikey Oz (https://github.com/familyfriendlymikey)",
+  "license": "GNU GPL v3"
+}
