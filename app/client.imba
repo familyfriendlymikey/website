@@ -20,5 +20,7 @@ tag app
 			fs:25px
 		<a href="schedule"> "SCHEDULE"
 		<a href="fto"> "FTO"
+		<a href="https://www.youtube.com/channel/UCkY9t704HSIvgaP1zE4uklA"> "YOUTUBE"
+		<a href="https://www.instagram.com/familyfriendlymikey/"> "INSTAGRAM"
 
 imba.mount <app>
