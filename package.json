@@ -2,7 +2,7 @@
   "name": "ffm",
   "scripts": {
     "start": "imba -wS server.imba",
-    "deploy": "rm -rf dist && imba build --baseurl \".\" server.imba && echo \"mikey.love\" > dist/public/CNAME && gh-pages -f -d dist/public/"
+    "deploy": "rm -rf dist && imba build --baseurl \".\" server.imba && echo \"bread.quest\" > dist/public/CNAME && gh-pages -f -d dist/public/"
   },
   "dependencies": {
     "express": "^4.17.1",
