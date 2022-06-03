@@ -1,0 +1,118 @@
+/* styles:app/client.imba */
+html {
+  font-family: var(--font-sans,system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem;
+  background: #0d001c;
+}
+.ci-af:not(#_):not(#_) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+svg.ci_af:not(#_),
+img.ci_af:not(#_) {
+  height: 100px;
+  transition: transform 250ms;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 10px -5px blue;
+  border-radius: 20px;
+}
+svg.ci_af:not(#_):hover,
+img.ci_af:not(#_):hover {
+  transform: scale(1.08);
+}
+page-home {
+  display: block;
+}
+.ci-aq:not(#_):not(#_) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: hsla(186.21, 93.55%, 81.76%, 100%);
+}
+.tab.ci_aq:not(#_) {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #0d001c;
+}
+.tab.ci_aq:not(#_):hover {
+  cursor: pointer;
+}
+app-tabs {
+  display: block;
+}
+.ci-at:not(#_):not(#_) {
+  width: 100%;
+}
+.header.ci_at:not(#_) {
+  background: hsla(224.44, 90.81%, 85.27%, 1);
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.body.ci_at:not(#_) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  --u_rg: 5px;
+  --u_cg: 5px;
+}
+.row.ci_at:not(#_) {
+  background: hsla(224.44, 79.44%, 62.84%, 1);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 25px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+app-table {
+  display: block;
+}
+.ci-ax:not(#_):not(#_) {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+}
+page-lists {
+  display: block;
+}
+.ci-az:not(#_):not(#_) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+app-tag {
+  display: block;
+}
+/* chunk:end */
