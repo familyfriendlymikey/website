@@ -10,13 +10,11 @@ tag page-home
 		<self>
 
 			css self
-				d:flex fld:row jc:space-evenly ai:center
+				d:flex fld:row jc:space-evenly ai:start
 				w:100% h:100% py:40px
 
 			css .link
-				h:100px
 				transition:transform 250ms
-				mb:20px
 				rd:20px
 
 			css h2
@@ -29,18 +27,25 @@ tag page-home
 				d:flex fld:column jc:start ai:center
 
 			css .emoji
-				fs:100px td:none p:10px
+				fs:100px td:none
+
+			css .link-container
+				d:flex ja:center
+				w:150px h:150px
+
+			css img, svg
+				w:100px
 
 			<.side>
 				<h2> "SOCIAL"
-				<a href="//youtube.com/c/familyfriendlymikey"> <svg.link src='./assets/youtube.svg'>
-				<a href="//instagram.com/familyfriendlymikey/"> <svg.link src='./assets/instagram.svg'>
-				<a href="//github.com/familyfriendlymikey"> <svg.link src='./assets/github.svg'>
+				<.link-container> <a href="//youtube.com/c/familyfriendlymikey"> <svg.link src='./assets/youtube.svg'>
+				<.link-container> <a href="//instagram.com/familyfriendlymikey/"> <svg.link src='./assets/instagram.svg'>
+				<.link-container> <a href="//github.com/familyfriendlymikey"> <svg.link src='./assets/github.svg'>
 			<.side>
 				<h2> "APPS"
-				<a href="//fuzzyho.me"> <.emoji.link> "🏠"
-				<a href="//jilu.pages.dev"> <img.link src='./assets/jilu.png'>
-				<a href="//fto.pages.dev"> <img.link src='./assets/fto.png'>
+				<.link-container> <a href="//fuzzyho.me"> <.emoji.link> "🏠"
+				<.link-container> <a href="//jilu.pages.dev"> <img.link src='./assets/jilu.png'>
+				<.link-container> <a href="//fto.pages.dev"> <img.link src='./assets/fto.png'>
 
 tag app-tabs
 
