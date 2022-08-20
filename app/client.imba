@@ -28,16 +28,19 @@ tag page-home
 			css .side
 				d:flex fld:column jc:start ai:center
 
+			css .emoji
+				fs:100px td:none p:10px
+
 			<.side>
 				<h2> "SOCIAL"
-				<a href="https://www.youtube.com/c/familyfriendlymikey"> <svg.link src='./assets/youtube.svg'>
-				<a href="https://www.instagram.com/familyfriendlymikey/"> <svg.link src='./assets/instagram.svg'>
-				<a href="https://github.com/familyfriendlymikey"> <svg.link src='./assets/github.svg'>
+				<a href="//youtube.com/c/familyfriendlymikey"> <svg.link src='./assets/youtube.svg'>
+				<a href="//instagram.com/familyfriendlymikey/"> <svg.link src='./assets/instagram.svg'>
+				<a href="//github.com/familyfriendlymikey"> <svg.link src='./assets/github.svg'>
 			<.side>
 				<h2> "APPS"
-				<a.link[fs:100px td:none p:10px] href="https://fuzzyho.me"> "🏠"
-				<a href="https://familyfriendlymikey.github.io/JILU/"> <img.link src='./assets/jilu.png'>
-				<a href="https://familyfriendlymikey.github.io/FTO/"> <img.link src='./assets/fto.png'>
+				<a href="//fuzzyho.me"> <.emoji.link> "🏠"
+				<a href="//jilu.pages.dev"> <img.link src='./assets/jilu.png'>
+				<a href="//fto.pages.dev"> <img.link src='./assets/fto.png'>
 
 tag app-tabs
 
