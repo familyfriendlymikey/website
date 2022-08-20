@@ -1,8 +1,10 @@
 {
   "name": "ffm",
   "scripts": {
-    "start": "imba -wS server.imba",
-    "deploy": "rm -rf dist && imba build -SMH --baseurl \".\" server.imba && touch dist/public/.nojekyll && gh-pages -f -t -d dist/public/"
+    "start": "imba run -SMH --baseurl . -w server.imba",
+    "build": "rm -rf dist && imba build -SMH --baseurl . server.imba",
+    "pages": "npx gh-pages --no-history --dotfiles --dist dist/public --branch deploy",
+    "deploy": "npm run build && npm run pages"
   },
   "dependencies": {
     "express": "^4.18.1",
@@ -15,6 +17,5 @@
   "description": "",
   "version": "1.0.0",
   "homepage": "https://github.com//familyfriendlymikey.github.io",
-  "author": "Mikey Oz (https://github.com/familyfriendlymikey)",
-  "license": "GNU GPL v3"
+  "author": "Mikey Oz (https://github.com/familyfriendlymikey)"
 }
