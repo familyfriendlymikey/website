@@ -152,6 +152,7 @@ tag app
 
 			css self
 				d:flex fld:column jc:flex-start ai:center h:100% w:100%
+				max-width:700px
 
 			<page-home>
 
