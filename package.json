@@ -1,21 +1,28 @@
 {
-  "name": "ffm",
+  "name": "imba-vite-project",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "imba run -SMH --baseurl . -w server.imba",
-    "build": "rm -rf dist && imba build -SMH --baseurl . server.imba",
-    "pages": "npx gh-pages --no-history --dotfiles --dist dist/public --branch deploy",
-    "deploy": "npm run build && npm run pages"
-  },
-  "dependencies": {
-    "express": "^4.18.1",
-    "imba": "^2.0.0-alpha.208"
+    "dev": "vite",
+    "build": "vite build",
+    "pages": "npx gh-pages --no-history --dotfiles --dist dist --branch release",
+    "publish": "npm run build && npm run pages",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "devDependencies": {
-    "@types/node": "^17.0.38",
-    "gh-pages": "^4.0.0"
+    "@testing-library/dom": "^8.17.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@vitest/ui": "^0.23.1",
+    "imba": "^2.0.0-alpha.220",
+    "jsdom": "^20.0.0",
+    "vite": "^3.1.0",
+    "vite-plugin-imba": "^0.4.1",
+    "vitest": "^0.23.1",
+    "vitest-github-actions-reporter-temp": "^0.8.3"
   },
-  "description": "",
-  "version": "1.0.0",
-  "homepage": "https://github.com//familyfriendlymikey.github.io",
-  "author": "Mikey Oz (https://github.com/familyfriendlymikey)"
+  "dependencies": {
+    "marked": "^4.1.0"
+  }
 }

@@ -1,0 +1,8 @@
+{
+	apps: [
+		{
+			name: "website",
+			script : "npm run start"
+		}
+	]
+}
