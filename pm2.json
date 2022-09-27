@@ -2,7 +2,7 @@
 	apps: [
 		{
 			name: "website",
-			script : "npm run start"
+			script : "vite --port 5142"
 		}
 	]
 }

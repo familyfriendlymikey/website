@@ -49,8 +49,6 @@ tag app-post
 	get active_post
 		let title = global.decodeURIComponent(route.params.title)
 		posts.find do
-			p $1.title
-			p title
 			$1.title is title
 	<self>
 		css w:100%
