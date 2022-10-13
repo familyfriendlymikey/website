@@ -7,7 +7,8 @@ So I was like what if I just start the markdown watcher in my home directory wit
 That worked, and so far it doesn't cause any buggy behavior on my computer and only uses like 70MB of RAM, but then I thought why don't I just leave dev servers for all my apps on too, turning those on and off all the time is super annoying, and they also take up a terminal window. Imba.io needs both `npm run watch` and `npm run dev` which is double annoying.
 
 So I just made an ecosystem file for PM2
-```js
+
+```json
 module.exports = {
   apps: [
     {
@@ -34,10 +35,12 @@ module.exports = {
 ]
 }
 ```
+
 and put it in my user home.
 
 Then I made some aliases to start and stop it:
-```zsh
+
+```sh
 # ~/.zshrc
 alias psa='pm2 start ~/pm2.json'
 alias pso='pm2 stop ~/pm2.json'
@@ -46,6 +49,7 @@ alias plo='clear && pm2 logs'
 alias pse='pm2 start pm2.json'
 alias pde='pm2 delete'
 ```
+
 And since `pm2 start` also restarts, I can manage the whole thing with `psa` and `pso`.
 
 Then I just added the links to [fuzzyhome](https://fuzzyho.me) :).

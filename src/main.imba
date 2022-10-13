@@ -1,16 +1,13 @@
-let p = console.log
-import { marked } from 'marked'
-import './markdown.css'
 import list_data from './list_data.imba'
+import posts from './parse_posts.imba'
 
-let posts = Object.values import.meta.glob('./posts/*.md',{eager:yes,as:'raw'})
-posts = posts.map do
-	title: $1.slice(0,$1.indexOf("\n")).replace(/^#*/,'').trim!
-	content: $1
+global css @root ff:sans c:blue1 bg:#0d1117 scroll-behavior:smooth
+global css body d:flex fld:column jc:center ai:center m:0
+global css a td:none c:blue1 td@hover:underline outline:none
 
-global css @root ff:sans c:blue1
-global css body d:flex fld:column jc:center ai:center m:0 bg:#0d1117
-global css a td:none c:blue1 td@hover:underline
+tag app-404
+	<self[d:box]>
+		"This doesn't exist :("
 
 tag app-home
 	<self>
@@ -46,17 +43,32 @@ tag app-nav
 		<a.tab route-to="/lists"> "LISTS"
 
 tag app-post
-	get active_post
-		let title = global.decodeURIComponent(route.params.title)
-		posts.find do
-			$1.title is title
 	<self>
 		css w:100%
-		<.markdown-body innerHTML=marked.parse(active_post.content)>
+
+		let title = global.decodeURIComponent(route.params.title)
+		let post = posts.find do $1.title is title
+
+		unless post
+			<app-404>
+		else
+			<.markdown-body>
+
+				# using outerHTML will cause the title to be the same even when
+				# navigating to different posts
+				<div innerHTML=post.html_title>
+
+				if post.toc.length
+					<.toc>
+						for { fragment, text, level } in post.toc
+							<a href="#{fragment}" innerHTML=text>
+								css d:block c:cool5 pl:{(level - 1)*3}
+
+				<div innerHTML=post.content>
 
 tag app-blog
 	<self>
-		css gap:40px d:flex fld:column mt:40px
+		css gap:10 d:flex fld:column mt:40px
 		for post in posts
 			<a route-to="/blog/{global.encodeURIComponent(post.title)}">
 				css fs:40 p:10 rd:5 bg:#161b22 cursor:pointer
@@ -117,5 +129,6 @@ tag app
 		<app-list route="/lists/:type">
 		<app-lists route="/lists">
 		<app-home route="/">
+		<app-404 route="*">
 
 imba.mount <app>

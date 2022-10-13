@@ -1,7 +1,7 @@
 {
 	apps: [
 		{
-			name: "website",
+			name: "website 5142",
 			script : "vite --port 5142"
 		}
 	]
