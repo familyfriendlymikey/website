@@ -2,8 +2,5 @@ import { imba } from 'vite-plugin-imba';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [imba()],
-	define: {
-		log: 'console.log'
-	}
+	plugins: [imba()]
 });
