@@ -28,7 +28,7 @@ tag app-home
 			<.link-container> <a href="https://github.com/familyfriendlymikey"> <svg.link src='./assets/github.svg'>
 		<.side>
 			<h2> "APPS"
-			<.link-container> <a href="https://fuzzyho.me"> <.emoji.link> "🏠"
+			<.link-container> <a href="https://chrome.google.com/webstore/detail/fuzzyhome/lbnndgaohjkpbaekakcdfeiacagfcinf"> <.emoji.link> "🏠"
 			<.link-container> <a href="https://jilu.pages.dev"> <img.link src='./assets/jilu.png'>
 			<.link-container> <a href="https://fto.pages.dev"> <img.link src='./assets/fto.png'>
 
@@ -39,7 +39,6 @@ tag app-nav
 		css .tab h:100% d:flex ja:center
 			@hover cursor:pointer
 		<a.tab route-to="/"> "HOME"
-		<a.tab route-to="/blog"> "BLOG"
 		<a.tab route-to="/lists"> "LISTS"
 
 tag app-post
@@ -108,7 +107,7 @@ tag app-list
 		css .item fl:1 p:3 5
 		<.row[mb:1 rdt:2]>
 			<.item> "Name"
-			<.item> "Incorrect"
+			<.item> "If you don't like this you're an idiot?"
 		for item in list_data
 			if item.type is route.params.type
 				<.row>
